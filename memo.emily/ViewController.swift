@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func next(_ sender: Any) {
+        performSegue(withIdentifier: "toNext", sender: nil)
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNext" {
@@ -25,8 +26,5 @@ class ViewController: UIViewController {
             nextView.recievedText = text.text!
         }
     }
-    
-    
-
 }
 
